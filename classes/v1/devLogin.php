@@ -1,5 +1,5 @@
 <?php
-	class Devices{
+	class DevLogin{
 		
 		// Connection
 		private $conn;
