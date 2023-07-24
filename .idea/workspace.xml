@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:main" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="8bc516b9-fc14-45f0-a2e5-0b1f9a08a39f" name="Default Changelist" comment="New station event create issue resolved">
+      <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+    </option>
+  </component>
+  <component name="ComposerSettings">
+    <execution>
+      <phar pharPath="$PROJECT_DIR$/composer.phar" interpreterId="12d09ee8-0c38-4658-96dc-ac6c12f80e6b" />
+    </execution>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="hiddenUrls">
+      <set>
+        <option value="https://github.com/iqhired/api_pn.git" />
+        <option value="https://github.com/iqhired/plantnavigtor.git" />
+      </set>
+    </option>
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="PhpServers">
+    <servers>
+      <server host="plantnavigator" id="85bc8dd0-d621-4ed0-a380-6ee1eedc2076" name="plantnavigator" port="8888" />
+      <server host="restapi" id="99c8525b-889b-4de1-a526-2b85d134f545" name="restapi" port="8888" />
+      <server host="localhost" id="1fec7c14-c3fe-4e85-a532-71b1f35d06af" name="localhost" port="8888">
+        <path_mappings>
+          <mapping local-root="$PROJECT_DIR$/../plantnavigtor/log_module/converterCore/demo" remote-root="/Library/Application Support/appsolute/MAMP PRO/phpMyAdmin" />
+        </path_mappings>
+      </server>
+    </servers>
+  </component>
+  <component name="PhpWebServerValidation" path_to_validation_script="$PROJECT_DIR$" selected_validation_type="LOCAL" web_path_to_validation_script="http://restapi:8888" />
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
+  <component name="ProjectId" id="27CNspqyo2k2CouK23QWopCz2vb" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/../pn_2023/config" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="pn_api" type="PhpRemoteDebugRunConfigurationType" factoryName="PHP Remote Debug" filter_connections="FILTER" server_name="restapi" session_id="Phpstorm">
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8bc516b9-fc14-45f0-a2e5-0b1f9a08a39f" name="Default Changelist" comment="" />
+      <created>1648820317478</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1648820317478</updated>
+      <workItem from="1648820319740" duration="14649000" />
+      <workItem from="1653010141897" duration="3792000" />
+      <workItem from="1672721725898" duration="15000" />
+      <workItem from="1672721745188" duration="44000" />
+      <workItem from="1672721793136" duration="4000" />
+      <workItem from="1672721807655" duration="23000" />
+      <workItem from="1672721858701" duration="1191000" />
+      <workItem from="1673613910405" duration="306000" />
+      <workItem from="1673939771324" duration="103000" />
+      <workItem from="1674120565109" duration="8000" />
+      <workItem from="1674473432439" duration="566000" />
+      <workItem from="1674544222604" duration="7901000" />
+      <workItem from="1674560992327" duration="1999000" />
+      <workItem from="1677749642296" duration="1500000" />
+      <workItem from="1677823212148" duration="9421000" />
+      <workItem from="1677942360702" duration="46000" />
+      <workItem from="1678080231517" duration="159000" />
+      <workItem from="1678080512661" duration="106000" />
+      <workItem from="1690185575769" duration="1197000" />
+    </task>
+    <task id="LOCAL-00001" summary="FIXED TASKBOARD ASSIGN ISSUE">
+      <created>1648823084309</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1648823084309</updated>
+    </task>
+    <task id="LOCAL-00002" summary="good piece printing">
+      <created>1649253394372</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1649253394373</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Added New Logger file">
+      <created>1674546600120</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1674546600120</updated>
+    </task>
+    <task id="LOCAL-00004" summary="New station event create issue resolved">
+      <created>1677942159109</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1677942159110</updated>
+    </task>
+    <task id="LOCAL-00005" summary="api iot Initial Commit">
+      <created>1690185612586</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1690185612587</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="1">
+          <value>
+            <State>
+              <option name="BEK_SORT_TYPE" value="1" />
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="HIGHLIGHTERS">
+                <map>
+                  <entry key="MY_COMMITS" value="true" />
+                </map>
+              </option>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/main" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+        <entry key="2">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/main" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/main" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/master" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/pn2" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <MESSAGE value="FIXED TASKBOARD ASSIGN ISSUE" />
+    <MESSAGE value="good piece printing" />
+    <MESSAGE value="Added New Logger file" />
+    <MESSAGE value="New station event create issue resolved" />
+    <MESSAGE value="api iot Initial Commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="api iot Initial Commit" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="560" y="251" key="Vcs.Push.Dialog.v2" timestamp="1690185614653">
+      <screen x="0" y="25" width="1920" height="1005" />
+    </state>
+    <state x="560" y="251" key="Vcs.Push.Dialog.v2/-1280.25.1280.775/0.25.1920.1005@0.25.1920.1005" timestamp="1690185614653" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/api/v1/login/login.php</url>
+          <line>34</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="NONE" type="php">
+          <url>file://$PROJECT_DIR$/api/v1/login/login.php</url>
+          <line>33</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/classes/v1/sgUsers.php</url>
+          <line>47</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/../pn_2023/index.php</url>
+          <line>36</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/../pn_2023/log_module/sg_station_event_log.php</url>
+          <line>587</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/../pn_2023/log_module/sg_station_event_log.php</url>
+          <line>480</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/../pn_2023/events_module/station_events.php</url>
+          <line>2</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/../pn_2023/events_module/station_events.php</url>
+          <line>583</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/../pn_2023/events_module/station_events.php</url>
+          <line>237</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
