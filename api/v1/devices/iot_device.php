@@ -11,7 +11,7 @@ header("Access-Control-Allow-Methods: POST");
 header("Access-Control-Max-Age: 3600");
 header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
 
-include_once '../../../classes/v1/Iot_Device.php';
+include_once '../../../classes/v1/IotDevice.php';
 
 $jwt = $_SERVER['HTTP_ACCESS_TOKEN'];
 if($jwt){
@@ -24,7 +24,7 @@ if($jwt){
         $database = new Database();
         $db = $database->getConnection();
 
-        $item = new Iot_Device($db);
+        $item = new IotDevice($db);
 
         $data = json_decode(file_get_contents("php://input"));
 

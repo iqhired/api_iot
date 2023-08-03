@@ -11,7 +11,7 @@
 	header("Access-Control-Max-Age: 3600");
 	header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
 	
-	include_once '../../../classes/v1/devices.php';
+	include_once '../../../classes/v1/IotDevice.php';
 	
 	$jwt = $_SERVER['HTTP_ACCESS_TOKEN'];
 	if($jwt){
