@@ -28,15 +28,15 @@ if($jwt){
 
         $data = json_decode(file_get_contents("php://input"));
 
-        $this->cust_id = $_POST['cust_id'];
-        $this->edit_cust_name = $_POST['edit_cust_name'];
-        $this->edit_cust_email = $_POST['edit_cust_email'];
-        $this->edit_cust_fistname = $_POST['edit_cust_fistname'];
-        $this->edit_cust_lastname = $_POST['edit_cust_lastname'];
-        $this->edit_mobile = $_POST['edit_mobile'];
-        $this->edit_role = $_POST['edit_role'];
-        $this->edit_cust_profile_pic = $_POST['edit_cust_profile_pic'];
-        $this->edit_cust_address = $_POST['edit_cust_address'];
+        $item->cust_id = $_POST['cust_id'];
+        $item->edit_cust_name = $_POST['edit_cust_name'];
+        $item->edit_cust_email = $_POST['edit_cust_email'];
+        $item->edit_cust_fistname = $_POST['edit_cust_fistname'];
+        $item->edit_cust_lastname = $_POST['edit_cust_lastname'];
+        $item->edit_role = $_POST['edit_role'];
+        $item->edit_mobile = $_POST['edit_mobile'];
+      //  $item->edit_cust_profile_pic = $_POST['edit_cust_profile_pic'];
+        $item->edit_cust_address = $_POST['edit_cust_address'];
 
         $sgPos = $item->editIotUsers();
 

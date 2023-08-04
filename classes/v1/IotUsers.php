@@ -22,6 +22,13 @@ class IotUsers{
     public $cust_address;
     public $is_deleted;
     public $delete_check;
+    public $edit_cust_name;
+    public $edit_cust_email;
+    public $edit_cust_fistname;
+    public $edit_cust_lastname;
+    public $edit_role;
+    public $edit_cust_address;
+    public $edit_mobile;
 
     // Db connection
     public function __construct($db)
@@ -63,10 +70,10 @@ class IotUsers{
     public function editIotUsers()
     {
 
-        $sqlQuery = "update " . $this->db_table . " SET cust_name = ? ,cust_email = ? ,cust_fistname = ? ,cust_lastname = ?,mobile = ? ,role = ? ,cust_profile_pic = ? ,cust_address = ?   where cust_id = '$this->cust_id'";
+        $sqlQuery = "update " . $this->db_table . " SET cust_name = ? ,cust_email = ? ,cust_fistname = ? ,cust_lastname = ?,mobile = ? ,role = ?  ,cust_address = ?   where cust_id = '$this->cust_id'";
 
         $stmt = $this->conn->prepare($sqlQuery);
-        $stmt->execute([$this->cust_name,$this->cust_email,$this->cust_fistname,$this->cust_lastname,$this->mobile,$this->role,$this->cust_profile_pic,$this->cust_address]);
+        $stmt->execute([$this->edit_cust_name,$this->edit_cust_email,$this->edit_cust_fistname,$this->edit_cust_lastname,$this->edit_mobile,$this->edit_role,$this->edit_cust_address]);
 
         $sqlQuery1 = "SELECT * FROM " . $this->db_table . " ORDER BY " . $this->db_table. ".cust_id DESC LIMIT 0,1";
         $stmt = $this->conn->prepare($sqlQuery1);
@@ -83,7 +90,7 @@ class IotUsers{
             $this->edit_cust_lastname = $dataRow['edit_cust_lastname'];
             $this->edit_mobile = $dataRow['edit_mobile'];
             $this->edit_role = $dataRow['edit_role'];
-            $this->edit_cust_profile_pic = $dataRow['edit_cust_profile_pic'];
+         //   $this->edit_cust_profile_pic = $dataRow['edit_cust_profile_pic'];
             $this->edit_cust_address = $dataRow['edit_cust_address'];
             return $this;
         }
