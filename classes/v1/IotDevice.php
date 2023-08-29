@@ -54,31 +54,13 @@ class IotDevice
         }
 
     }
-    public function getEditIotDevice()
+    public function updateIotDevice()
     {
 
         $sqlQuery = "update " . $this->db_table . " SET c_id = ? ,device_description = ? ,device_location = ?,type_id = ?, modified_by = ?, modified_on = ? where device_id = '$this->device_id'";
 
         $stmt = $this->conn->prepare($sqlQuery);
-        $stmt->execute([$this->c_id,$this->device_description,$this->type_id, $this->device_location, $this->modified_by, $this->modified_on]);
-
-        $sqlQuery1 = "SELECT * FROM " . $this->db_table . " ORDER BY " . $this->db_table. ".device_id desc limit 0,1";
-        $stmt = $this->conn->prepare($sqlQuery1);
-        $stmt->execute();
-        $dataRow = $dataRow = $stmt->fetch(PDO::FETCH_ASSOC);
-
-        if ($dataRow == null || empty($dataRow)) {
-            return null;
-        } else {
-            $this->device_id = $dataRow['device_id'];
-            $this->c_id = $dataRow['c_id'];
-            $this->device_description = $dataRow['device_description'];
-            $this->type_id = $dataRow['type_id'];
-            $this->device_location = $dataRow['device_location'];
-            $this->modified_by = $dataRow['modified_by'];
-            $this->modified_on = $dataRow['modified_on'];
-            return $this;
-        }
+        $resp = $stmt->execute([$this->c_id,$this->device_description,$this->device_location,$this->type_id,  $this->modified_by, $this->modified_on]);
 
     }
     public function getdeleteIotDevice()

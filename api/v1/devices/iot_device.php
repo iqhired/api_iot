@@ -56,7 +56,7 @@ if($jwt){
         }
         echo json_encode(array(
             "status" => "ERROR",
-            "message" => $mess
+            "message" => $e->errorInfo[2]
         ));
     }
 

@@ -29,14 +29,14 @@ if($jwt){
         $data = json_decode(file_get_contents("php://input"));
 
         $item->device_id = $_POST['device_id'];
-        $item->c_id = $_POST['c_id'];
+        $item->c_id = empty($_POST["c_id"])?null:$_POST["c_id"];;
         $item->device_description = $_POST['device_description'];
-        $item->type_id = $_POST['type_id'];
+        $item->type_id =  empty($_POST["type_id"])?null:$_POST["type_id"];
         $item->device_location = $_POST['device_location'];
         $item->modified_by = $_POST['modified_by'];
         $item->modified_on = $_POST['modified_on'];
 
-        $sgDevice = $item->getEditIotDevice();
+        $sgDevice = $item->updateIotDevice();
 
         if($sgDevice != null){
             http_response_code(200);
