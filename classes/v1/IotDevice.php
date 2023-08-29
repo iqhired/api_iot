@@ -55,10 +55,10 @@ class IotDevice
     public function getEditIotDevice()
     {
 
-        $sqlQuery = "update " . $this->db_table . " SET device_description = ? ,device_location = ?, modified_by = ?, modified_on = ? where device_id = '$this->device_id'";
+        $sqlQuery = "update " . $this->db_table . " SET c_id = ? ,device_description = ? ,device_location = ?, modified_by = ?, modified_on = ? where device_id = '$this->device_id'";
 
         $stmt = $this->conn->prepare($sqlQuery);
-        $stmt->execute([$this->device_description, $this->device_location, $this->modified_by, $this->modified_on]);
+        $stmt->execute([$this->c_id,$this->device_description, $this->device_location, $this->modified_by, $this->modified_on]);
 
         $sqlQuery1 = "SELECT * FROM " . $this->db_table . " ORDER BY " . $this->db_table. ".device_id desc limit 0,1";
         $stmt = $this->conn->prepare($sqlQuery1);
@@ -69,6 +69,8 @@ class IotDevice
             return null;
         } else {
             $this->device_id = $dataRow['device_id'];
+            $this->c_id = $dataRow['c_id'];
+
             $this->device_description = $dataRow['device_description'];
             $this->device_location = $dataRow['device_location'];
             $this->modified_by = $dataRow['modified_by'];
