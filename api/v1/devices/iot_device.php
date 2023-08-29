@@ -28,7 +28,7 @@ if($jwt){
 
         $data = json_decode(file_get_contents("php://input"));
 
-        $item->c_id = $_POST['c_id'];
+        $item->c_id = empty($_POST["c_id"])?null:$_POST["c_id"];
         $item->device_id = $_POST['device_id'];
         $item->device_name = $_POST['device_name'];
         $item->device_description = $_POST['device_description'];
@@ -41,19 +41,21 @@ if($jwt){
 
         if($sgDevice != null){
             http_response_code(200);
-            echo json_encode(array("STATUS" => "Success" , "device_id" => $sgDevice));
+            echo json_encode(array("status" => "SUCCESS" , "device_id" => $sgDevice));
         } else{
             http_response_code(401);
             echo json_encode(array("message" => "Iot Device failed"));
         }
-
     }catch (Exception $e){
-
         http_response_code(401);
-
+        $mess = '';
+        if($e->errorInfo[0] == '23000'){
+            $eD = explode('for key' , $e->errorInfo[2]);
+            $mess = $eD[0] . '.' . 'Check ' . str_replace( '_',' ', $eD[1] );
+        }
         echo json_encode(array(
-            "message" => "Access denied.",
-            "error" => $e->getMessage()
+            "status" => "ERROR",
+            "message" => $mess
         ));
     }
 
