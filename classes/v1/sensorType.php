@@ -45,10 +45,10 @@ class sensorType
     public function editType()
     {
 
-        $sqlQuery = "update " . $this->db_table . " SET stype_name  = ? ,updated_at = ?  where type_id = '$this->type_id'";
+        $sqlQuery = "update " . $this->db_table . " SET stype_name  = ?   where type_id = '$this->type_id'";
 
         $stmt = $this->conn->prepare($sqlQuery);
-        $stmt->execute([$this->stype_name,$this->updated_at]);
+        $stmt->execute([$this->stype_name]);
 
         $sqlQuery1 = "SELECT * FROM " . $this->db_table . " ORDER BY " . $this->db_table. ".type_id desc limit 0,1";
         $stmt = $this->conn->prepare($sqlQuery1);
@@ -58,8 +58,8 @@ class sensorType
         if ($dataRow == null || empty($dataRow)) {
             return null;
         } else {
+            $this->type_id = $dataRow['type_id'];
             $this->stype_name = $dataRow['stype_name'];
-            $this->updated_at = $dataRow['updated_at'];
             return $this;
         }
 

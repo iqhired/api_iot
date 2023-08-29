@@ -32,6 +32,7 @@ if($jwt){
         $item->device_id = $_POST['device_id'];
         $item->device_name = $_POST['device_name'];
         $item->device_description = $_POST['device_description'];
+        $item->type_id = empty($_POST["type_id"])?null:$_POST["type_id"];
         $item->device_location = $_POST['device_location'];
         $item->is_active = $_POST['is_active'];
         $item->created_by = $_POST['created_by'];

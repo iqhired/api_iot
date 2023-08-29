@@ -30,27 +30,24 @@ if($jwt){
 
         $item->type_id = $_POST['type_id'];
         $item->edit_stype_name = $_POST['edit_stype_name'];
-        $item->updated_at = $_POST['updated_at'];
 
-        $sgDevice = $item->editType();
+        $sgPos = $item->editType();
 
-        if($sgDevice != null){
-            http_response_code(200);
-            echo json_encode(array("status" => "SUCCESS" , "type_id" => $sgDevice));
+        if($sgPos != null){
+            echo json_encode(array("STATUS" => "Success" , "type_id" => $sgPos));
         } else{
+
             http_response_code(401);
-            echo json_encode(array("message" => "Iot Device failed"));
+            echo json_encode(array("message" => "Iot Device Update failed"));
         }
+
     }catch (Exception $e){
+
         http_response_code(401);
-        $mess = '';
-        if($e->errorInfo[0] == '23000'){
-            $eD = explode('for key' , $e->errorInfo[2]);
-            $mess = $eD[0] . '.' . 'Check ' . str_replace( '_',' ', $eD[1] );
-        }
+
         echo json_encode(array(
-            "status" => "ERROR",
-            "message" => $mess
+            "message" => "Access denied.",
+            "error" => $e->getMessage()
         ));
     }
 

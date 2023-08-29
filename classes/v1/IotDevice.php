@@ -9,6 +9,7 @@ class IotDevice
     public $device_id;
     public $device_name;
     public $device_description;
+    public $type_id;
     public $device_location;
     public $is_active;
     public $is_deleted;
@@ -27,10 +28,10 @@ class IotDevice
     public function getIotDevice()
     {
 
-        $sqlQuery = "insert into " . $this->db_table . "(c_id,device_id,device_name,device_description,device_location,is_active,created_by,created_on) values (?,?,?,?,?,?,?,?)";
+        $sqlQuery = "insert into " . $this->db_table . "(c_id,device_id,device_name,device_description,type_id,device_location,is_active,created_by,created_on) values (?,?,?,?,?,?,?,?,?)";
 
         $stmt = $this->conn->prepare($sqlQuery);
-        $resp = $stmt->execute([$this->c_id, $this->device_id, $this->device_name, $this->device_description, $this->device_location, $this->is_active, $this->created_by, $this->created_on]);
+        $resp = $stmt->execute([$this->c_id, $this->device_id, $this->device_name, $this->device_description,$this->type_id, $this->device_location, $this->is_active, $this->created_by, $this->created_on]);
 
         $sqlQuery1 = "SELECT * FROM " . $this->db_table . " ORDER BY " . $this->db_table. ".device_id desc limit 0,1";
         $stmt = $this->conn->prepare($sqlQuery1);
@@ -44,6 +45,7 @@ class IotDevice
             $this->device_id = $dataRow['device_id'];
             $this->device_name = $dataRow['device_name'];
             $this->device_description = $dataRow['device_description'];
+            $this->type_id = $dataRow['type_id'];
             $this->device_location = $dataRow['device_location'];
             $this->is_active = $dataRow['is_active'];
             $this->created_by = $dataRow['created_by'];
@@ -55,10 +57,10 @@ class IotDevice
     public function getEditIotDevice()
     {
 
-        $sqlQuery = "update " . $this->db_table . " SET c_id = ? ,device_description = ? ,device_location = ?, modified_by = ?, modified_on = ? where device_id = '$this->device_id'";
+        $sqlQuery = "update " . $this->db_table . " SET c_id = ? ,device_description = ? ,device_location = ?,type_id = ?, modified_by = ?, modified_on = ? where device_id = '$this->device_id'";
 
         $stmt = $this->conn->prepare($sqlQuery);
-        $stmt->execute([$this->c_id,$this->device_description, $this->device_location, $this->modified_by, $this->modified_on]);
+        $stmt->execute([$this->c_id,$this->device_description,$this->type_id, $this->device_location, $this->modified_by, $this->modified_on]);
 
         $sqlQuery1 = "SELECT * FROM " . $this->db_table . " ORDER BY " . $this->db_table. ".device_id desc limit 0,1";
         $stmt = $this->conn->prepare($sqlQuery1);
@@ -70,8 +72,8 @@ class IotDevice
         } else {
             $this->device_id = $dataRow['device_id'];
             $this->c_id = $dataRow['c_id'];
-
             $this->device_description = $dataRow['device_description'];
+            $this->type_id = $dataRow['type_id'];
             $this->device_location = $dataRow['device_location'];
             $this->modified_by = $dataRow['modified_by'];
             $this->modified_on = $dataRow['modified_on'];

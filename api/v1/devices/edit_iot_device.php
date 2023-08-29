@@ -31,6 +31,7 @@ if($jwt){
         $item->device_id = $_POST['device_id'];
         $item->c_id = $_POST['c_id'];
         $item->device_description = $_POST['device_description'];
+        $item->type_id = $_POST['type_id'];
         $item->device_location = $_POST['device_location'];
         $item->modified_by = $_POST['modified_by'];
         $item->modified_on = $_POST['modified_on'];
