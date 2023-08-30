@@ -29,7 +29,7 @@ if($jwt){
         $data = json_decode(file_get_contents("php://input"));
 
         $item->type_id = $_POST['type_id'];
-        $item->edit_stype_name = $_POST['edit_stype_name'];
+        $item->edit_type_name = $_POST['edit_type_name'];
 
         $sgPos = $item->editType();
 
