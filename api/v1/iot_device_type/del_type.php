@@ -24,36 +24,34 @@ if($jwt){
         $database = new Database();
         $db = $database->getConnection();
 
-        $item = new sensorType($db);
+        $item = new iotDeviceType($db);
 
         $data = json_decode(file_get_contents("php://input"));
 
-        $item->stype_name = empty($_POST["stype_name"])?null:$_POST["stype_name"];
-        $item->created_at = $_POST['created_at'];
-        $item->updated_at = $_POST['updated_at'];
+
+        $item->type_id = $_POST['type_id'];
 
 
-        $sgType = $item->createType();
+        $sgDevice = $item->delType();
 
-        if($sgType != null){
+        if($sgDevice != null){
             http_response_code(200);
-            echo json_encode(array("status" => "SUCCESS" , "stype_name" => $sgType));
+            echo json_encode(array("STATUS" => "Success" , "device_id" => $sgDevice));
         } else{
             http_response_code(401);
             echo json_encode(array("message" => "Iot Device failed"));
         }
+
     }catch (Exception $e){
+
         http_response_code(401);
-        $mess = '';
-        if($e->errorInfo[0] == '23000'){
-            $eD = explode('for key' , $e->errorInfo[2]);
-            $mess = $eD[0] . '.' . 'Check ' . str_replace( '_',' ', $eD[1] );
-        }
+
         echo json_encode(array(
-            "status" => "ERROR",
-            "message" => $mess
+            "message" => "Access denied.",
+            "error" => $e->getMessage()
         ));
     }
 
 }
 ?>
+

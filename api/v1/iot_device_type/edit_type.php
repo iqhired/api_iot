@@ -11,7 +11,7 @@ header("Access-Control-Allow-Methods: POST");
 header("Access-Control-Max-Age: 3600");
 header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
 
-include_once '../../../classes/v1/sensorType.php';
+include_once '../../../classes/v1/iotDeviceType.php';
 
 $jwt = $_SERVER['HTTP_ACCESS_TOKEN'];
 if($jwt){
@@ -24,22 +24,21 @@ if($jwt){
         $database = new Database();
         $db = $database->getConnection();
 
-        $item = new sensorType($db);
+        $item = new iotDeviceType($db);
 
         $data = json_decode(file_get_contents("php://input"));
 
+        $item->type_id = $_POST['type_id'];
+        $item->edit_stype_name = $_POST['edit_stype_name'];
 
-        $item->delete_check = $_POST['delete_check'];
+        $sgPos = $item->editType();
 
-
-        $sgDevice = $item->deleteType();
-
-        if($sgDevice != null){
-            http_response_code(200);
-            echo json_encode(array("STATUS" => "Success" , "device_id" => $sgDevice));
+        if($sgPos != null){
+            echo json_encode(array("STATUS" => "Success" , "type_id" => $sgPos));
         } else{
+
             http_response_code(401);
-            echo json_encode(array("message" => "Iot Device failed"));
+            echo json_encode(array("message" => "Iot Device Update failed"));
         }
 
     }catch (Exception $e){
@@ -53,6 +52,4 @@ if($jwt){
     }
 
 }
-
 ?>
-
